@@ -1,8 +1,9 @@
 <template>
-  <div class="container">
-    <div>
+  <div class="font-sans bg-gray-200 border-t-8">
+    <div class="mt-20 px-10 ">
       <logo />
-      <h1 class="title">
+      <div class="center text-center">
+<h1 class="title">
         ssc2020
       </h1>
       <h2 class="subtitle">
@@ -25,11 +26,11 @@
         </a>
         <nuxt-link
           to="/home"
-          target="_blank"
           class="button--grey"
         >
           Proceed to Project
         </nuxt-link>
+      </div>
       </div>
     </div>
   </div>
@@ -51,13 +52,10 @@ export default {
   @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
 }
 
 .title {
@@ -81,4 +79,11 @@ export default {
 .links {
   padding-top: 15px;
 }
+page-enter-active, .page-leave-active {
+      transition: all .30s ease-out;
+    }
+    .page-enter, .page-leave-active {
+      opacity: 0;
+      transform-origin: 50% 50%;
+    }
 </style>
